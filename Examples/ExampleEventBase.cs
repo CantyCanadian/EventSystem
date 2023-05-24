@@ -3,8 +3,8 @@ using System.IO;
 
 namespace Canty.Event
 {
-    public abstract class GameEventBase<T> : Internal.GameEventBase
-        where T : GameEventBase<T>
+    public abstract class ExampleEventBase<T> : Internal.ExampleEventBase
+        where T : ExampleEventBase<T>
     {
 #if DEVELOPMENT_BUILD || UNITY_EDITOR
         public static T GetEvent([CallerFilePath] string origin = "")
@@ -22,7 +22,7 @@ namespace Canty.Event
 
 namespace Canty.Event.Internal
 {
-    public abstract class GameEventBase : EventBase
+    public abstract class ExampleEventBase : EventBase
     {
         protected static EventPoolObject _poolObject = new EventPoolObject();
 

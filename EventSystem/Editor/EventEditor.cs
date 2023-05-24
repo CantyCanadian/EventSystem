@@ -16,6 +16,7 @@ namespace Canty.Editor
 {
     public class EventEditor : EditorWindow, ISerializationCallbackReceiver
     {
+        // You can rename all the namespaces for this system. Canty's my default namespace.
         public const string DEFAULT_NAMESPACE = "Canty.Event";
 
         private const string GENERATED_COMMENT_MARKER = "//------------------------------------------------------------------------------";
@@ -32,8 +33,12 @@ namespace Canty.Editor
         private const string CUSTOM_CODE_START =    "//--------------CUSTOM CODE START----------------";
         private const string CUSTOM_CODE_END =      "//--------------CUSTOM CODE END------------------";
 
-        // Please move this file on other projects.
+        // This is the path where the editor will save extra data that helps it run faster.
+        // It should be in a folder called Editor found somewhere logical.
         private static string _scriptPath => Application.dataPath + "/Scripts/Core/Event System/Editor/";
+
+        // This is the path where the editor will save all your events.
+        // It can be placed anywhere, but not under a folder called Editor, or else your events will be editor-only.
         private static string _eventPath => Application.dataPath + "/Scripts/Core/Event System/Events/";
 
         public enum CustomCodeLocation

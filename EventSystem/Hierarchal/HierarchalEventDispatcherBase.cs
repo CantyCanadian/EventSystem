@@ -10,5 +10,6 @@ namespace Canty.Event
 
         public void RegisterEventListener(HierarchalEventListenerBase<EventBaseType> listener) => _dispatcherObject.RegisterEventListener(listener);
         public void SendEvent<EventType>(EventType eventObject) where EventType : EventBaseType => _dispatcherObject.SendEvent(eventObject);
+        public void SendEventImmediately<EventType>(EventType eventObject) where EventType : EventBaseType => _dispatcherObject.SendEventImmediately(eventObject);
     }
 }

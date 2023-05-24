@@ -8,7 +8,7 @@
 
 ## How to Use
 
-**1. Determine what type of event system that you need. Two methods are possible with this package.**
+**1. Determine what type of event system that you need. Two methods are possible with this package. The only thing that changes between both is how the dispatcher is accessed.**
 * Global: Anyone can access the singleton event dispatcher, send and receive events through it.
 * Hierarchal: Listeners need to be a child object of the dispatcher to register, send and receive events through it.
 
@@ -31,4 +31,4 @@
 
 **5. Clicking Generate will create the event with the given values and import it to your project.**
 
-**6. Now that you have your own event type, your own dispatcher and even your own event implementation, you can use the system! Please refer to RandomExampleClass.cs in the Examples folder for a showcase of how to use all your new tools.
+**6. Now that you have your own event type, your own dispatcher and even your own event implementation, you can use the system! Please refer to RandomExampleClass.cs in the Examples folder for a showcase of how to use all your new tools.**
